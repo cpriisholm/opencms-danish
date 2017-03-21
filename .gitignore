@@ -1,0 +1,16 @@
+.directory
+.settings
+stacktrace.log
+opencms_init.log
+.idea/libraries/
+.idea/workspace.xml
+.idea/tasks.xml
+gradle.xml
+.iws
+/*.log
+/target/
+/target-eclipse/
+/build/
+/bin/
+/out/
+*~

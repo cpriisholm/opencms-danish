@@ -1,0 +1,16 @@
+project.description = 'OpenCms 10 Danish localization for the workplace'
+project.version = '10.0.1.4'
+
+// Module specific settings (overriding the default set in the master build.gradle) 
+ext {
+	moduleName = 'org.opencms.locale.da'
+	// No jar thus empty
+	moduleJarName = ''
+	// Comma-sep list of strings - class names (fully qualified) to be included as class files rather than be part of the jar 
+	// - typically for overriding core OpenCms classes which must included as .class files directly to get prioritized by class loader
+	moduleClasses = []
+	// If the module is a workplace tool then the name property must be set (typically same as module name, i.e. ${module.vfsname}) 
+	workplaceToolName = ''
+	// --
+	opencmsVersion = '10.0.1'
+}
