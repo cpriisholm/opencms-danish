@@ -13,4 +13,5 @@ gradle.xml
 /build/
 /bin/
 /out/
+/.gradle/
 *~

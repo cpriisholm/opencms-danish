@@ -1,16 +1,38 @@
-project.description = 'OpenCms 10 Danish localization for the workplace'
-project.version = '10.0.1.4'
+buildscript {
+    repositories {
+        maven { url uri( "file://${System.properties['user.home']}/local-repos/" ) }
+        mavenCentral()
+    }
+    dependencies {
+        classpath group: 'dk.codedroids.oc.gradle', name: 'opencms-plugin', version: '0.7'
+    }
+}
 
-// Module specific settings (overriding the default set in the master build.gradle) 
-ext {
-	moduleName = 'org.opencms.locale.da'
-	// No jar thus empty
-	moduleJarName = ''
-	// Comma-sep list of strings - class names (fully qualified) to be included as class files rather than be part of the jar 
-	// - typically for overriding core OpenCms classes which must included as .class files directly to get prioritized by class loader
-	moduleClasses = []
-	// If the module is a workplace tool then the name property must be set (typically same as module name, i.e. ${module.vfsname}) 
-	workplaceToolName = ''
-	// --
-	opencmsVersion = '10.0.1'
+apply plugin: 'groovy'
+apply plugin: 'dk.codedroids.opencms'
+apply plugin: 'maven'
+apply plugin: 'idea'
+
+project.description = 'OpenCms 10 Danish localization for the workplace'
+project.version = '10.0.1.5'
+
+// repos -  name is set to rootProject.name
+group 'com.codedroids.oc'
+version "${project.version}"
+
+opencms {
+    moduleVersion = project.version
+    moduleName = 'org.opencms.locale.da'
+    moduleNiceName = 'OpenCms 10 Danish localization for the workplace'
+    moduleJarName = ''
+    moduleAuthor = 'CodeDroids ApS'
+    moduleAuthorEmail = 'support@codedroids.dk'
+    moduleClasses = []
+    workplaceToolName = ''
+    opencmsVersion = '10.0.1'
+    moduleReleaseDir = "${System.properties['user.home']}/git/ocbuild/releases"
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.4.1'
 }

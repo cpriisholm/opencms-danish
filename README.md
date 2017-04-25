@@ -1,7 +1,7 @@
 # opencms-danish
 Danish translation of the [OpenCms](http://www.opencms.org) workplace
 
-*Note the gradle.build is probably of little use as is, since it depends on a master build file not present here.*
+*In order to build the project with the included **build.gradle**, you need the [opencms gradle plugin](https://github.com/cpriisholm/opencms-gradle-plugin/).*
 
 ## Fix for version 10.0.1
 
@@ -28,4 +28,3 @@ tinymce.addI18n('da',{
         'Replace': 'Erstat',
         'Replace all': 'Erstat alle'
 });
-```

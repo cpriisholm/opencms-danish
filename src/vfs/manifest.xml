@@ -2,7 +2,10 @@
 
 <export>
 	<info>
-		<infoproject>Offline</infoproject>
+        <creator>Admin</creator>
+        <opencms_version>10.0.1</opencms_version>
+        <createdate>Mon, 23 May 2016 10:12:19 GMT</createdate>
+        <infoproject>Offline</infoproject>
 		<export_version>10</export_version>
 	</info>
 	<module>
